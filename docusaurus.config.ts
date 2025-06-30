@@ -16,15 +16,17 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: "https://alexpasmantier.github.io",
+  url: "https://kapobajza.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: process.env.NODE_ENV === "production" ? "/television/" : "/",
+  baseUrl:
+    process.env.NODE_ENV === "production" ? "/television-docs-sample/" : "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "alexpasmantier", // Usually your GitHub org/user name.
-  projectName: "television", // Usually your repo name.
+  organizationName: "kapobajza", // Usually your GitHub org/user name.
+  projectName: "television-docs-sample", // Usually your repo name.
+  deploymentBranch: "gh-pages",
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",

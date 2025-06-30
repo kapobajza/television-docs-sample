@@ -18,7 +18,7 @@ Default keybindings are as follows:
 | <kbd>Ctrl</kbd> + <kbd>o</kbd> | Toggle the preview panel |
 | <kbd>Esc</kbd> | Quit the application |
 
-These keybindings are all configurable (see [Configuration](Configuration-file)).
+These keybindings are all configurable (see [Configuration](configuration-file)).
 
 # Keybindings Guide
 Following this are some configuration presets you can use for your bindings. Most of these will probably match an existing program.
