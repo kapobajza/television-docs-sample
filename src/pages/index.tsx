@@ -19,11 +19,24 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
-            to="/docs/getting-started"
+            className="button-mainpage"
+            to="/docs/installation"
           >
-            Get started 🚀
+            Installation
           </Link>
+          <Link
+            className="button-mainpage"
+            to="/docs/configuration"
+          >
+            Configuration
+          </Link>
+        </div>
+        <div className={styles.heroImage}>
+          <img
+            src="/img/tv-bg.png"
+            alt="Television"
+            className={styles.heroImageImg}
+          />
         </div>
       </div>
     </header>
@@ -35,7 +48,7 @@ export default function Home(): ReactNode {
     <Layout description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
-        <HomepageFeatures />
+        {/* <HomepageFeatures /> */}
       </main>
     </Layout>
   );

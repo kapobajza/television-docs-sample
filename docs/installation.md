@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Getting started
+title: Installation
 ---
 
 <img width="200" alt="tv-version" src="https://github.com/user-attachments/assets/b31e7495-89c8-4227-83bd-53919c5222e4" />

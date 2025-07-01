@@ -6,8 +6,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "Television",
-  tagline:
-    "A cross-platform, fast and extensible general purpose fuzzy finder ",
+  tagline: "A cross-platform, fast and extensible general purpose fuzzy finder",
   favicon: "img/favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -44,9 +43,9 @@ const config: Config = {
       "classic",
       {
         docs: {
+          path: "docs",
+          routeBasePath: "docs",
           sidebarPath: "./sidebars.ts",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           // editUrl:
           //   "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
@@ -75,6 +74,10 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
+    colorMode: {
+      defaultMode: "dark",
+      disableSwitch: true,
+    },
     navbar: {
       title: "Television",
       logo: {
@@ -83,10 +86,20 @@ const config: Config = {
       },
       items: [
         {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          to: "/docs/installation",
+          label: "Installation",
           position: "left",
-          label: "Getting Started",
+        },
+        {
+          type: "docSidebar",
+          position: "left",
+          label: "Docs",
+          sidebarId: "docSidebar",
+        },
+        {
+          href: "https://github.com/alexpasmantier/television/releases",
+          label: "Releases",
+          position: "left",
         },
         {
           href: "https://github.com/alexpasmantier/television",
@@ -96,7 +109,6 @@ const config: Config = {
       ],
     },
     footer: {
-      style: "dark",
       copyright: `Copyright © ${new Date().getFullYear()} television.`,
     },
     prism: {
