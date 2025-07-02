@@ -36,12 +36,12 @@
   flex-direction: column;
   justify-content: space-between;
   flex: 1 1 0;
-  max-width: 90%;
-  min-width: 354px;
+  max-width: 65%;
+  min-width: 350px;
   color: var(--ifm-color-primary);
   font-family: "Ubuntu Mono", monospace;
   font-weight: 100;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: left;
   line-height: 1.5;
   margin: 0;

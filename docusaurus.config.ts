@@ -38,30 +38,6 @@ const config: Config = {
     locales: ["en"],
   },
 
-  headTags: [
-    {
-      tagName: "link",
-      attributes: {
-        rel: "preconnect",
-        href: "https://fonts.googleapis.com",
-      },
-    },
-    {
-      tagName: "link",
-      attributes: {
-        rel: "preconnect",
-        href: "https://fonts.gstatic.com",
-      },
-    },
-    {
-      tagName: "link",
-      attributes: {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Doto:wght@356&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Zen+Dots&display=swap",
-      },
-    },
-  ],
-
   presets: [
     [
       "classic",
@@ -133,11 +109,12 @@ const config: Config = {
       ],
     },
     footer: {
-      copyright: `Copyright © ${new Date().getFullYear()} television.`,
+      copyright: `Copyright © ${new Date().getFullYear()} television`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ["bash", "json", "yaml", "toml", "diff"],
     },
   } satisfies Preset.ThemeConfig,
 };

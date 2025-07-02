@@ -4,6 +4,16 @@
  * work well for content-centric websites.
  */
 
+@font-face {
+  font-family: "Doto";
+  src: url("/fonts/Doto.ttf");
+}
+
+@font-face {
+  font-family: "Ubuntu Mono";
+  src: url("/fonts/UbuntuMono-Regular.ttf");
+}
+
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #aeaed1;
@@ -15,8 +25,10 @@
   --ifm-color-primary-lightest: #f7f7fb;
   --ifm-background-color: #241f31;
 
+  --ifm-font-family-base: "Noto Sans", monospace;
   --ifm-font-color-base: #aeaed1;
   --ifm-font-color-secondary: #545c8c;
+  --ifm-font-size-base: 1.1rem;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.05);
 
@@ -26,10 +38,10 @@
 [data-theme='dark'] { }
 
 .navbar {
-  background-color: var(--ifm-background-color); /* Match background */
-  border-bottom: 3px solid var(--ifm-color-primary-darkest); /* Subtle border for separation */
+  background-color: var(--ifm-background-color);
+  border-bottom: 3px solid var(--ifm-color-primary-darkest);
   font-family: "Doto", sans-serif;
-  font-size: 1.5rem; /* Slightly larger for emphasis */
+  font-size: 1.5rem;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
@@ -42,7 +54,7 @@
 }
 
 .navbar__title {
-  color: var(--ifm-color-primary-darkest); /* Ensure navbar title is readable */
+  color: var(--ifm-color-primary-darkest);
   margin-right: 2rem;
   margin-left: 0.5rem;
 }
@@ -50,23 +62,24 @@
 .navbar__item {
   color: var(--ifm-color-primary-lightest);
   font-size: 1.3rem;
+  font-weight: 400;
 }
 
 .navbar__item:hover {
   color: var(--ifm-color-primary-darker);
-  text-decoration: none; /* Prevent underline on hover */
+  text-decoration: none;
 }
 
 .hero {
-  background-color: var(--ifm-background-color); /* Match background */
-  margin-bottom: 4rem; /* Space below subtitle */
+  background-color: var(--ifm-background-color);
+  margin-bottom: 4rem;
 }
 
 .hero__title {
-  color: var(--ifm-font-color-base); /* Ensure hero title is readable */
+  color: var(--ifm-font-color-base);
   margin-bottom: 0;
   font-family: "Doto", sans-serif;
-  font-size: 3rem; /* Slightly larger for emphasis */
+  font-size: 3rem;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
@@ -75,21 +88,20 @@
 }
 
 .hero__subtitle {
-  color: var(--ifm-font-color-secondary); /* Dimmed subtitle for contrast */
+  color: var(--ifm-font-color-secondary);
 
-  /* font-family: "Noto Sans", sans-serif; */
   font-family: "Ubuntu Mono", monospace;
-  font-weight: 200;
+  font-weight: 400;
   font-style: italic;
-  font-size: 1.3rem; /* Slightly larger for emphasis */
+  font-size: 1.3rem;
   margin-bottom: 6rem;
   margin-top: 0rem;
 }
 
 .footer {
-  background-color: var(--ifm-background-color); /* Match background */
-  color: var(--ifm-font-color-base); /* Ensure footer text is readable */
-  border-top: 3px solid var(--ifm-color-primary-darkest); /* Subtle border for separation */
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  border-top: 3px solid var(--ifm-color-primary-darkest);
 }
 
 .button-mainpage {
@@ -108,15 +120,20 @@
 }
 
 .button-mainpage:hover {
-  /* prevent text underlining on hover */
   text-decoration: none;
-  /* Change background color on hover */
   background-color: var(--ifm-font-color-base);
-  /* Change text color on hover */
   color: var(--ifm-background-color);
 }
 
 .button-mainpage:active {
   box-shadow: 0px 0px 0px 0px var(--ifm-font-color-base);
   transform: translateY(5px);
+}
+
+nav.menu {
+  border-right: 1px solid var(--ifm-color-primary-darkest); 
+}
+
+.table-of-contents__left-border {
+  border-left: 1px solid var(--ifm-color-primary-darkest);
 }
