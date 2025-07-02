@@ -6,8 +6,8 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "Television",
-  tagline: "A cross-platform, fast and extensible general purpose fuzzy finder",
-  favicon: "img/favicon.ico",
+  tagline: "The cross-platform, fast and extensible fuzzy finder.",
+  favicon: "img/tv-icon-150.png",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -37,6 +37,30 @@ const config: Config = {
     defaultLocale: "en",
     locales: ["en"],
   },
+
+  headTags: [
+    {
+      tagName: "link",
+      attributes: {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Doto:wght@356&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Zen+Dots&display=swap",
+      },
+    },
+  ],
 
   presets: [
     [
@@ -82,23 +106,23 @@ const config: Config = {
       title: "Television",
       logo: {
         alt: "Television Logo",
-        src: "img/logo.svg",
+        src: "img/tv-icon-80.png",
       },
       items: [
         {
           to: "/docs/installation",
-          label: "Installation",
+          label: "installation",
           position: "left",
         },
         {
           type: "docSidebar",
           position: "left",
-          label: "Docs",
+          label: "docs",
           sidebarId: "docSidebar",
         },
         {
           href: "https://github.com/alexpasmantier/television/releases",
-          label: "Releases",
+          label: "releases",
           position: "left",
         },
         {

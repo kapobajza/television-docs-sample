@@ -15,10 +15,11 @@
   --ifm-color-primary-lightest: #f7f7fb;
   --ifm-background-color: #241f31;
 
-  --ifm-font-color-base: #aeaed1;         /* Dark gray text */
-  --ifm-font-color-secondary: #545c8c;    /* Dimmed text */
+  --ifm-font-color-base: #aeaed1;
+  --ifm-font-color-secondary: #545c8c;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.05); /* Subtle line highlight */
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.05);
+
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -26,8 +27,34 @@
 
 .navbar {
   background-color: var(--ifm-background-color); /* Match background */
-  color: var(--ifm-font-color-base); /* Ensure text is readable */
   border-bottom: 3px solid var(--ifm-color-primary-darkest); /* Subtle border for separation */
+  font-family: "Doto", sans-serif;
+  font-size: 1.5rem; /* Slightly larger for emphasis */
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings:
+    "ROND" 0;
+}
+
+.navbar__logo {
+  margin-left: 1rem;
+}
+
+.navbar__title {
+  color: var(--ifm-color-primary-darkest); /* Ensure navbar title is readable */
+  margin-right: 2rem;
+  margin-left: 0.5rem;
+}
+
+.navbar__item {
+  color: var(--ifm-color-primary-lightest);
+  font-size: 1.3rem;
+}
+
+.navbar__item:hover {
+  color: var(--ifm-color-primary-darker);
+  text-decoration: none; /* Prevent underline on hover */
 }
 
 .hero {
@@ -37,14 +64,26 @@
 
 .hero__title {
   color: var(--ifm-font-color-base); /* Ensure hero title is readable */
-  font-family: 'monospace';
   margin-bottom: 0;
+  font-family: "Doto", sans-serif;
+  font-size: 3rem; /* Slightly larger for emphasis */
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings:
+    "ROND" 0;
 }
 
 .hero__subtitle {
   color: var(--ifm-font-color-secondary); /* Dimmed subtitle for contrast */
-  font-weight: 200; /* Lighter weight for subtitle */
+
+  /* font-family: "Noto Sans", sans-serif; */
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 200;
+  font-style: italic;
   font-size: 1.3rem; /* Slightly larger for emphasis */
+  margin-bottom: 6rem;
+  margin-top: 0rem;
 }
 
 .footer {
@@ -58,10 +97,10 @@
   outline: none;
   background-color: var(--ifm-background-color);
   padding: 10px 20px;
-  margin: 20px 10px 0px 10px;
-  font-size: 14px;
+  margin: auto;
   font-weight: 800;
-  font-family: 'monospace';
+  font-family: "Doto", sans-serif;
+  font-size: 1.2rem;
   color: var(--ifm-font-color-base);
   border-radius: 6px;
   transition: all ease 0.1s;
@@ -72,7 +111,7 @@
   /* prevent text underlining on hover */
   text-decoration: none;
   /* Change background color on hover */
-  background-color: var(--ifm-color-primary);
+  background-color: var(--ifm-font-color-base);
   /* Change text color on hover */
   color: var(--ifm-background-color);
 }
