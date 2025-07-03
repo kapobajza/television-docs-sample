@@ -132,7 +132,7 @@ For all shells you'll have to restart it (or similar) to integrate the changes.
 
 Edit the `~/.config/television/shell/integration.zsh` file and add the following:
 
-```zsh
+```sh
 _tv_search() {
     emulate -L zsh
     zle -I

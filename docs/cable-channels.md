@@ -11,9 +11,7 @@ Installing cable channels is as simple as creating provider files in your config
 
 A provider file is a `*channels.toml` file that contains cable channel prototypes defined as follows:
 
-**my-custom-channels.toml**
-
-```toml
+```jsx title="my-custom-channels.toml"
 [[cable_channel]]
 name = "git-log"
 source_command = 'git log --oneline --date=short --pretty="format:%h %s %an %cd" "$@"'
@@ -39,7 +37,8 @@ These cable channels are accessible:
 
 # 📘 Cable channel prototypes spec
 
-```[[cable_channel]]
+```jsx toml
+[[cable_channel]]
 name = String
 source_command = String
 preview_command = Option<String>

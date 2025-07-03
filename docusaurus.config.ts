@@ -6,9 +6,8 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "Television",
-  tagline:
-    "A cross-platform, fast and extensible general purpose fuzzy finder ",
-  favicon: "img/favicon.ico",
+  tagline: "The cross-platform, fast and extensible fuzzy finder.",
+  favicon: "img/tv-icon-150.png",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -44,9 +43,9 @@ const config: Config = {
       "classic",
       {
         docs: {
+          path: "docs",
+          routeBasePath: "docs",
           sidebarPath: "./sidebars.ts",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           // editUrl:
           //   "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
@@ -75,18 +74,32 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
+    colorMode: {
+      defaultMode: "dark",
+      disableSwitch: true,
+    },
     navbar: {
       title: "Television",
       logo: {
         alt: "Television Logo",
-        src: "img/logo.svg",
+        src: "img/tv-icon-80.png",
       },
       items: [
         {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          to: "/docs/installation",
+          label: "installation",
           position: "left",
-          label: "Getting Started",
+        },
+        {
+          type: "docSidebar",
+          position: "left",
+          label: "docs",
+          sidebarId: "docSidebar",
+        },
+        {
+          href: "https://github.com/alexpasmantier/television/releases",
+          label: "releases",
+          position: "left",
         },
         {
           href: "https://github.com/alexpasmantier/television",
@@ -96,12 +109,12 @@ const config: Config = {
       ],
     },
     footer: {
-      style: "dark",
-      copyright: `Copyright © ${new Date().getFullYear()} television.`,
+      copyright: `Copyright © ${new Date().getFullYear()} television`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ["bash", "json", "yaml", "toml", "diff"],
     },
   } satisfies Preset.ThemeConfig,
 };
